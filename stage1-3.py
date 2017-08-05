@@ -20,6 +20,13 @@ color_mapper = CategoricalColorMapper(factors=['Asia','Africa','Antarctica','Aus
 plot = figure(x_axis_label='Population', y_axis_label='Life Expectancy', tools='pan, wheel_zoom, box_zoom, reset, hover, save', title='Population vs Life Expectancy')
 plot.diamond(x='Population', y='Life_expectancy', source=country_data, size=10, color=dict(field='Continent', transform=color_mapper), legend='Continent')          #x and y values are column headers in the csv file stored inside the variable country_data
 
+hover = plot.select_one(HoverTool)
+
+hover.tooltips = [('Country Name English', '@Country_English'),
+                  ('Population', '@Population'),
+                  ('Life Expectancy (years)', '@Life_expectancy')
+                  ]                 #The name after @ is a name of the column in the database.
+
 plot.legend.location = 'bottom_right'
 plot.legend.background_fill_color = 'lightgrey'
 
