@@ -1,18 +1,18 @@
-import numpy as np
+
 import pandas as pd
 
-from bokeh.charts import Bar
 from bokeh.io import output_file, show
+from bokeh.plotting import ColumnDataSource, figure
 
-output_file('population.html')
+output_file('pop-life.html')
 
 file = 'country-pops.csv'
 
 countries = pd.read_csv(file, nrows=5)      #nrows=5 limits the data being pulled out to just 5 rows for simplicity
-countries_array = np.array(countries.head)
 
-print(countries_array)
+country_data = ColumnDataSource(countries)
 
-bar_chart = Bar(countries, 'Country_English', values='Population', title='Population', legend=False)
+plot = figure(x_axis_label='Population', y_axis_label='Life Expectancy')
+plot.circle(x='Population', y='Life_expectancy', source=country_data, size=15)          #x and y values are column headers in the csv file stored inside the variable country_data
 
-show(bar_chart)
+show(plot)
