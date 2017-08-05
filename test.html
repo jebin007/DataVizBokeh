@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" type="text/css"/>
+
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+        Bokeh.set_log_level("info")
+    </script>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bk-root">
+    <div class="bk-plotdiv" id="80e5ecb3-b39b-485d-9633-8e7d9022cfc8"></div>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        var fn = function () {
+            Bokeh.safely(function () {
+                var docs_json = {
+                    "48c45775-b770-459a-8035-6c128a03e26f": {
+                        "roots": {
+                            "references": [{
+                                "attributes": {
+                                    "overlay": {
+                                        "id": "66087992-8f38-489f-a539-660fa4cbdca1",
+                                        "type": "BoxAnnotation"
+                                    },
+                                    "plot": {
+                                        "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e",
+                                        "subtype": "Figure",
+                                        "type": "Plot"
+                                    }
+                                }, "id": "90b6057d-08bf-4764-87dd-480396314fe4", "type": "BoxZoomTool"
+                            }, {
+                                "attributes": {},
+                                "id": "47905d65-6c38-40e6-9d0c-4a2cc9acf109",
+                                "type": "BasicTicker"
+                            }, {
+                                "attributes": {
+                                    "plot": {
+                                        "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e",
+                                        "subtype": "Figure",
+                                        "type": "Plot"
+                                    }
+                                }, "id": "6a04add8-8cfe-4ecb-9985-66f3ccb04376", "type": "PanTool"
+                            }, {
+                                "attributes": {
+                                    "formatter": {
+                                        "id": "62caf4ac-da7e-4b95-aeb0-2d202ec598d6",
+                                        "type": "BasicTickFormatter"
+                                    },
+                                    "plot": {
+                                        "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e",
+                                        "subtype": "Figure",
+                                        "type": "Plot"
+                                    },
+                                    "ticker": {"id": "c0957449-bffc-4d31-902f-9bc630cf779e", "type": "BasicTicker"}
+                                }, "id": "40a8ad65-b540-4dfd-82bc-46255229c8cc", "type": "LinearAxis"
+                            }, {
+                                "attributes": {
+                                    "bottom_units": "screen",
+                                    "fill_alpha": {"value": 0.5},
+                                    "fill_color": {"value": "lightgrey"},
+                                    "left_units": "screen",
+                                    "level": "overlay",
+                                    "line_alpha": {"value": 1.0},
+                                    "line_color": {"value": "black"},
+                                    "line_dash": [4, 4],
+                                    "line_width": {"value": 2},
+                                    "plot": null,
+                                    "render_mode": "css",
+                                    "right_units": "screen",
+                                    "top_units": "screen"
+                                }, "id": "66087992-8f38-489f-a539-660fa4cbdca1", "type": "BoxAnnotation"
+                            }, {
+                                "attributes": {
+                                    "plot": {
+                                        "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e",
+                                        "subtype": "Figure",
+                                        "type": "Plot"
+                                    }
+                                }, "id": "d93ba600-72d9-4987-a5fd-d1fffe650554", "type": "ResetTool"
+                            }, {
+                                "attributes": {
+                                    "fill_alpha": {"value": 0.1},
+                                    "fill_color": {"value": "#1f77b4"},
+                                    "line_alpha": {"value": 0.1},
+                                    "line_color": {"value": "#1f77b4"},
+                                    "size": {"units": "screen", "value": 20},
+                                    "x": {"field": "x"},
+                                    "y": {"field": "y"}
+                                }, "id": "73e9fef3-ca0a-42f9-bfeb-d7649f6fb1c3", "type": "Square"
+                            }, {
+                                "attributes": {},
+                                "id": "fc28871e-5046-4b3a-923f-6c22a8d3ee78",
+                                "type": "BasicTickFormatter"
+                            }, {
+                                "attributes": {
+                                    "callback": null,
+                                    "column_names": ["x", "y"],
+                                    "data": {"x": [1, 2, 4, 8, 10], "y": [6, 2, 18, 4, 9]}
+                                }, "id": "683f1220-5e82-405b-ba37-48d0e90cf7d0", "type": "ColumnDataSource"
+                            }, {
+                                "attributes": {},
+                                "id": "6d838f6e-2c55-4310-8f49-fc11651a15aa",
+                                "type": "ToolEvents"
+                            }, {
+                                "attributes": {},
+                                "id": "c0957449-bffc-4d31-902f-9bc630cf779e",
+                                "type": "BasicTicker"
+                            }, {
+                                "attributes": {
+                                    "dimension": 1,
+                                    "plot": {
+                                        "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e",
+                                        "subtype": "Figure",
+                                        "type": "Plot"
+                                    },
+                                    "ticker": {"id": "47905d65-6c38-40e6-9d0c-4a2cc9acf109", "type": "BasicTicker"}
+                                }, "id": "33612f38-086b-4b89-9e5f-6ef2a0855867", "type": "Grid"
+                            }, {
+                                "attributes": {
+                                    "below": [{"id": "40a8ad65-b540-4dfd-82bc-46255229c8cc", "type": "LinearAxis"}],
+                                    "left": [{"id": "b88d3f0e-bd51-43b0-9f4b-4074640e4c15", "type": "LinearAxis"}],
+                                    "renderers": [{
+                                        "id": "40a8ad65-b540-4dfd-82bc-46255229c8cc",
+                                        "type": "LinearAxis"
+                                    }, {
+                                        "id": "c625afa6-d26e-4582-a0f8-5405d83de513",
+                                        "type": "Grid"
+                                    }, {
+                                        "id": "b88d3f0e-bd51-43b0-9f4b-4074640e4c15",
+                                        "type": "LinearAxis"
+                                    }, {
+                                        "id": "33612f38-086b-4b89-9e5f-6ef2a0855867",
+                                        "type": "Grid"
+                                    }, {
+                                        "id": "66087992-8f38-489f-a539-660fa4cbdca1",
+                                        "type": "BoxAnnotation"
+                                    }, {"id": "ab077be0-93df-429f-b078-0202f13662d4", "type": "GlyphRenderer"}],
+                                    "title": {"id": "60d1327f-0c8a-40fb-990f-a23a5755d860", "type": "Title"},
+                                    "tool_events": {"id": "6d838f6e-2c55-4310-8f49-fc11651a15aa", "type": "ToolEvents"},
+                                    "toolbar": {"id": "114ded21-4ce0-48f1-b30a-7d0e6cb61f4a", "type": "Toolbar"},
+                                    "x_range": {"id": "1d1acf8a-9dd2-4f73-b746-d94070804afb", "type": "DataRange1d"},
+                                    "y_range": {"id": "4322c191-2e51-4c29-ab7e-80f375dc1efd", "type": "DataRange1d"}
+                                }, "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e", "subtype": "Figure", "type": "Plot"
+                            }, {
+                                "attributes": {
+                                    "plot": {
+                                        "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e",
+                                        "subtype": "Figure",
+                                        "type": "Plot"
+                                    }, "ticker": {"id": "c0957449-bffc-4d31-902f-9bc630cf779e", "type": "BasicTicker"}
+                                }, "id": "c625afa6-d26e-4582-a0f8-5405d83de513", "type": "Grid"
+                            }, {
+                                "attributes": {
+                                    "fill_color": {"value": "#1f77b4"},
+                                    "line_color": {"value": "#1f77b4"},
+                                    "size": {"units": "screen", "value": 20},
+                                    "x": {"field": "x"},
+                                    "y": {"field": "y"}
+                                }, "id": "89bd4f1e-3945-44e0-8257-4157a54e9226", "type": "Square"
+                            }, {
+                                "attributes": {"callback": null},
+                                "id": "1d1acf8a-9dd2-4f73-b746-d94070804afb",
+                                "type": "DataRange1d"
+                            }, {
+                                "attributes": {"plot": null, "text": ""},
+                                "id": "60d1327f-0c8a-40fb-990f-a23a5755d860",
+                                "type": "Title"
+                            }, {
+                                "attributes": {
+                                    "active_drag": "auto",
+                                    "active_scroll": "auto",
+                                    "active_tap": "auto",
+                                    "tools": [{
+                                        "id": "6a04add8-8cfe-4ecb-9985-66f3ccb04376",
+                                        "type": "PanTool"
+                                    }, {
+                                        "id": "90b6057d-08bf-4764-87dd-480396314fe4",
+                                        "type": "BoxZoomTool"
+                                    }, {"id": "d93ba600-72d9-4987-a5fd-d1fffe650554", "type": "ResetTool"}]
+                                }, "id": "114ded21-4ce0-48f1-b30a-7d0e6cb61f4a", "type": "Toolbar"
+                            }, {
+                                "attributes": {"callback": null},
+                                "id": "4322c191-2e51-4c29-ab7e-80f375dc1efd",
+                                "type": "DataRange1d"
+                            }, {
+                                "attributes": {
+                                    "data_source": {
+                                        "id": "683f1220-5e82-405b-ba37-48d0e90cf7d0",
+                                        "type": "ColumnDataSource"
+                                    },
+                                    "glyph": {"id": "89bd4f1e-3945-44e0-8257-4157a54e9226", "type": "Square"},
+                                    "hover_glyph": null,
+                                    "muted_glyph": null,
+                                    "nonselection_glyph": {
+                                        "id": "73e9fef3-ca0a-42f9-bfeb-d7649f6fb1c3",
+                                        "type": "Square"
+                                    },
+                                    "selection_glyph": null
+                                }, "id": "ab077be0-93df-429f-b078-0202f13662d4", "type": "GlyphRenderer"
+                            }, {
+                                "attributes": {},
+                                "id": "62caf4ac-da7e-4b95-aeb0-2d202ec598d6",
+                                "type": "BasicTickFormatter"
+                            }, {
+                                "attributes": {
+                                    "formatter": {
+                                        "id": "fc28871e-5046-4b3a-923f-6c22a8d3ee78",
+                                        "type": "BasicTickFormatter"
+                                    },
+                                    "plot": {
+                                        "id": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e",
+                                        "subtype": "Figure",
+                                        "type": "Plot"
+                                    },
+                                    "ticker": {"id": "47905d65-6c38-40e6-9d0c-4a2cc9acf109", "type": "BasicTicker"}
+                                }, "id": "b88d3f0e-bd51-43b0-9f4b-4074640e4c15", "type": "LinearAxis"
+                            }], "root_ids": ["bb1b51f7-ef35-470c-9b8d-5b7e4236c93e"]
+                        }, "title": "Bokeh Application", "version": "0.12.5"
+                    }
+                };
+                var render_items = [{
+                    "docid": "48c45775-b770-459a-8035-6c128a03e26f",
+                    "elementid": "80e5ecb3-b39b-485d-9633-8e7d9022cfc8",
+                    "modelid": "bb1b51f7-ef35-470c-9b8d-5b7e4236c93e"
+                }];
+
+                Bokeh.embed.embed_items(docs_json, render_items);
+            });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+    })();
+
+</script>
+</body>
+</html>
