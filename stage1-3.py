@@ -20,8 +20,9 @@ color_mapper = CategoricalColorMapper(factors=['Asia','Africa','Antarctica','Aus
 
 TOOLTIPS = 'pan, wheel_zoom, box_zoom, reset, hover, save'
 
-plot = figure(x_axis_label='Population', y_axis_label='Life Expectancy', tools=TOOLTIPS, title='Population vs Life Expectancy')
-plot.diamond(x='Population', y='Life_expectancy', source=country_data, size=10, color=dict(field='Continent', transform=color_mapper), legend='Continent')          #x and y values are column headers in the csv file stored inside the variable country_data
+#Population vs Life Expectancy
+plot_life_expect = figure(x_axis_label='Population', y_axis_label='Life Expectancy', tools=TOOLTIPS, title='Population vs Life Expectancy')
+plot_life_expect.diamond(x='Population', y='Life_expectancy', source=country_data, size=10, color=dict(field='Continent', transform=color_mapper), legend='Continent')          #x and y values are column headers in the csv file stored inside the variable country_data
 
 #Population vs Birth Rate
 plot_birth_rate = figure(x_axis_label='Population',
@@ -37,21 +38,38 @@ plot_death_rate = figure(x_axis_label='Population',
                         )
 
 #Plot Population vs Birth Rate
-plot_birth_rate.circle(x='Population', y='Birthrate', source=country_data, size=10, color=dict(field='Continent', transform=color_mapper))  #field='Continent' makes our legend continent.
+plot_birth_rate.circle(x='Population', y='Birthrate', source=country_data, size=10, color=dict(field='Continent', transform=color_mapper), legend='Continent')  #field='Continent' makes our legend continent.
 
 #Plot Population vs Death Rate
-plot_death_rate.triangle(x='Population', y='Deathrate', source=country_data, size=10, color=dict(field='Continent', transform=color_mapper))
+plot_death_rate.triangle(x='Population', y='Deathrate', source=country_data, size=10, color=dict(field='Continent', transform=color_mapper), legend='Continent')
 
 
-hover = plot.select_one(HoverTool)
+hover = plot_life_expect.select_one(HoverTool)
 
 hover.tooltips = [('Country Name English', '@Country_English'),
                   ('Population', '@Population'),
-                  ('Life Expectancy (years)', '@Life_expectancy')
+                  ('Life Expectancy (years)', '@Life_expectancy'),
                   ]                 #The name after @ is a name of the column in the database.
 
-plot.legend.location = 'bottom_right'
-plot.legend.background_fill_color = 'lightgrey'
+#Hover Data for Population Vs Birth Rate
+hover1= plot_birth_rate.select_one(HoverTool)
 
+hover1.tooltips = [('Country Name English', '@Country_English'),
+                  ('Population', '@Population'),
+                  ('Birth Rate', '@Birthrate')]
 
-show(row(column(plot, plot_birth_rate), column(plot_death_rate)))   #Shows two columns of data: 1st for plot, plot_birth_rate and 2nd for plot_death_rate
+#Hover Data for Population vs Death Rate
+hover2= plot_death_rate.select_one(HoverTool)
+
+hover2.tooltips = [('Country Name English', '@Country_English'),
+                  ('Population', '@Population'),
+                  ('Death Rate', '@Deathrate')]
+
+plot_life_expect.legend.location = 'bottom_right'
+plot_life_expect.legend.background_fill_color = 'lightgrey'
+
+#Associating multiple plots with xrange
+plot_birth_rate.x_range = plot_life_expect.x_range      #Associating birth rate with life expectancy
+plot_death_rate.x_range= plot_life_expect.x_range       #Associating death rate with life expectancy
+
+show(row(column(plot_life_expect, plot_birth_rate), column(plot_death_rate)))   #Shows two columns of data: 1st for plot, plot_birth_rate and 2nd for plot_death_rate
